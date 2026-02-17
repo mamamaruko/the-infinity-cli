@@ -1,0 +1,288 @@
+#!/usr/bin/env bun
+
+// Bun runtime check - must be at the very top
+if (typeof Bun === 'undefined') {
+  console.error(`
+❌ oracle-skills requires Bun runtime
+
+You're running with Node.js, but this CLI uses Bun-specific features.
+
+To fix:
+  1. Install Bun: curl -fsSL https://bun.sh/install | bash
+  2. Run with: bunx oracle-skills install -g -y
+
+More info: https://bun.sh
+`);
+  process.exit(1);
+}
+
+import { program } from 'commander';
+import * as p from '@clack/prompts';
+import { agents, detectInstalledAgents, getAgentNames } from './agents.js';
+import { listSkills, installSkills, uninstallSkills } from './installer.js';
+import type { ShellMode } from './fs-utils.js';
+import pkg from '../../package.json' with { type: 'json' };
+
+const VERSION = pkg.version;
+
+program
+  .name('oracle-skills')
+  .description('Install Oracle skills to Claude Code, OpenCode, Cursor, and 11+ AI coding agents')
+  .version(VERSION);
+
+// Install command (default)
+program
+  .command('install', { isDefault: true })
+  .description('Install Oracle skills to agents')
+  .option('-g, --global', 'Install to user directory instead of project')
+  .option('-a, --agent <agents...>', 'Target specific agents (e.g., claude-code, opencode)')
+  .option('-s, --skill <skills...>', 'Install specific skills by name')
+  .option('-l, --list', 'List available skills without installing')
+  .option('-y, --yes', 'Skip confirmation prompts')
+  .option('--commands', 'Also install command stubs to ~/.claude/commands/')
+  .option('--shell', 'Force Bun.$ shell commands (use on Windows to test shell compatibility)')
+  .option('--no-shell', 'Force Node.js fs operations (use on Unix if Bun.$ causes issues)')
+  .action(async (options) => {
+    p.intro(`🔮 Oracle Skills Installer v${VERSION}`);
+
+    try {
+      // List mode - just show skills and exit
+      if (options.list) {
+        await listSkills();
+        p.outro('Use --skill <name> to install specific skills');
+        return;
+      }
+
+      // Determine target agents
+      let targetAgents: string[] = options.agent || [];
+
+      if (targetAgents.length === 0) {
+        // Auto-detect installed agents
+        const detected = detectInstalledAgents();
+
+        if (detected.length > 0) {
+          p.log.info(`Detected agents: ${detected.map((a) => agents[a as keyof typeof agents]?.displayName).join(', ')}`);
+
+          if (!options.yes) {
+            const useDetected = await p.confirm({
+              message: 'Install to detected agents?',
+            });
+
+            if (p.isCancel(useDetected)) {
+              p.log.info('Cancelled');
+              return;
+            }
+
+            if (useDetected) {
+              targetAgents = detected;
+            }
+          } else {
+            targetAgents = detected;
+          }
+        }
+
+        // If still no agents, prompt user to select
+        if (targetAgents.length === 0) {
+          const selected = await p.multiselect({
+            message: 'Select agents to install to:',
+            options: Object.entries(agents).map(([key, config]) => ({
+              value: key,
+              label: config.displayName,
+              hint: options.global ? config.globalSkillsDir : config.skillsDir,
+            })),
+            required: true,
+          });
+
+          if (p.isCancel(selected)) {
+            p.log.info('Cancelled');
+            return;
+          }
+
+          targetAgents = selected as string[];
+        }
+      }
+
+      // Validate agent names
+      const validAgents = getAgentNames();
+      const invalidAgents = targetAgents.filter((a) => !validAgents.includes(a));
+      if (invalidAgents.length > 0) {
+        p.log.error(`Unknown agents: ${invalidAgents.join(', ')}`);
+        p.log.info(`Valid agents: ${validAgents.join(', ')}`);
+        return;
+      }
+
+      // Determine shell mode
+      const shellMode: ShellMode = options.shell ? 'shell'
+        : options.noShell ? 'no-shell'
+        : 'auto';
+
+      // Install skills
+      await installSkills(targetAgents, {
+        global: options.global,
+        skills: options.skill,
+        yes: options.yes,
+        commands: options.commands,
+        shellMode,
+      });
+
+      p.outro('✨ Oracle skills installed! Restart your agent to activate.');
+    } catch (error) {
+      p.log.error(`Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      process.exit(1);
+    }
+  });
+
+// Uninstall command
+program
+  .command('uninstall')
+  .description('Remove installed Oracle skills')
+  .option('-g, --global', 'Uninstall from user directory')
+  .option('-a, --agent <agents...>', 'Target specific agents')
+  .option('-s, --skill <skills...>', 'Remove specific skills only')
+  .option('-y, --yes', 'Skip confirmation prompts')
+  .option('--shell', 'Force Bun.$ shell commands')
+  .option('--no-shell', 'Force Node.js fs operations')
+  .action(async (options) => {
+    p.intro(`🔮 Oracle Skills Uninstaller v${VERSION}`);
+
+    try {
+      // Determine target agents
+      let targetAgents: string[] = options.agent ? [...options.agent] : [];
+
+      // Skip auto-detect if agents specified
+      if (targetAgents.length > 0) {
+        p.log.info(`Using specified agents: ${targetAgents.join(', ')}`);
+      } else {
+        const detected = detectInstalledAgents();
+        if (detected.length > 0) {
+          p.log.info(`Detected agents: ${detected.map((a) => agents[a as keyof typeof agents]?.displayName).join(', ')}`);
+          targetAgents = detected;
+        }
+      }
+
+      if (targetAgents.length === 0) {
+        p.log.error('No agents detected. Use --agent to specify.');
+        return;
+      }
+
+      // Confirm
+      if (!options.yes) {
+        const skillInfo = options.skill ? `skills: ${options.skill.join(', ')}` : 'all Oracle skills';
+        const confirmed = await p.confirm({
+          message: `Remove ${skillInfo} from ${targetAgents.length} agent(s)?`,
+        });
+
+        if (p.isCancel(confirmed) || !confirmed) {
+          p.log.info('Cancelled');
+          return;
+        }
+      }
+
+      const spinner = p.spinner();
+      spinner.start('Removing skills');
+
+      // Determine shell mode
+      const shellMode: ShellMode = options.shell ? 'shell'
+        : options.noShell ? 'no-shell'
+        : 'auto';
+
+      const result = await uninstallSkills(targetAgents, {
+        global: options.global,
+        skills: options.skill,
+        yes: options.yes,
+        shellMode,
+      });
+
+      spinner.stop(`Removed ${result.removed} skills from ${result.agents} agent(s)`);
+      p.outro('✨ Skills removed. Restart your agent to apply changes.');
+    } catch (error) {
+      p.log.error(`Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
+      process.exit(1);
+    }
+  });
+
+// Agents command
+program
+  .command('agents')
+  .description('List all supported agents')
+  .action(() => {
+    console.log('\nSupported agents:\n');
+    for (const [key, config] of Object.entries(agents)) {
+      const installed = config.detectInstalled() ? '✓' : ' ';
+      console.log(`  [${installed}] ${key.padEnd(15)} ${config.displayName}`);
+    }
+    console.log('\n  ✓ = detected on this system\n');
+  });
+
+// List installed skills command
+program
+  .command('list')
+  .description('Show installed Oracle skills')
+  .option('-g, --global', 'Show global (user-level) skills')
+  .option('-a, --agent <agents...>', 'Show skills for specific agents')
+  .action(async (options) => {
+    const { readdirSync, existsSync } = await import('fs');
+    const { join } = await import('path');
+
+    let targetAgents: string[] = options.agent || [];
+
+    if (targetAgents.length === 0) {
+      targetAgents = detectInstalledAgents();
+    }
+
+    if (targetAgents.length === 0) {
+      console.log('\nNo agents detected. Use --agent to specify.\n');
+      return;
+    }
+
+    console.log('\nInstalled Oracle skills:\n');
+
+    let totalSkills = 0;
+
+    for (const agentName of targetAgents) {
+      const agent = agents[agentName as keyof typeof agents];
+      if (!agent) continue;
+
+      const skillsDir = options.global
+        ? agent.globalSkillsDir
+        : join(process.cwd(), agent.skillsDir);
+
+      const scope = options.global ? '(global)' : '(local)';
+
+      if (!existsSync(skillsDir)) {
+        console.log(`  ${agent.displayName} ${scope}: (no skills directory)`);
+        continue;
+      }
+
+      const skillDirs = readdirSync(skillsDir, { withFileTypes: true })
+        .filter((d) => d.isDirectory() && !d.name.startsWith('.'))
+        .map((d) => d.name);
+
+      if (skillDirs.length === 0) {
+        console.log(`  ${agent.displayName} ${scope}: (empty)`);
+      } else {
+        console.log(`  ${agent.displayName} ${scope}: ${skillDirs.length} skills`);
+        for (const skill of skillDirs) {
+          // Try to read version from SKILL.md
+          let version = '';
+          const skillMdPath = join(skillsDir, skill, 'SKILL.md');
+          if (existsSync(skillMdPath)) {
+            try {
+              const content = require('fs').readFileSync(skillMdPath, 'utf-8');
+              const versionMatch = content.match(/v(\d+\.\d+\.\d+)/);
+              if (versionMatch) {
+                version = ` (v${versionMatch[1]})`;
+              }
+            } catch {}
+          }
+          console.log(`    - ${skill}${version}`);
+        }
+        totalSkills += skillDirs.length;
+      }
+      console.log('');
+    }
+
+    console.log(`Total: ${totalSkills} skills across ${targetAgents.length} agent(s)\n`);
+  });
+
+program.parse();

@@ -1,0 +1,22 @@
+node_modules/
+*.log
+.DS_Store
+dist/
+
+# AI Brain - ephemeral
+ψ/active/
+ψ/learn/
+ψ/memory/traces/
+ψ/lessons-learned/
+
+# Claude-mem generated
+**/CLAUDE.md
+
+# External clones
+phukhao-oracle/
+
+# Installed skills (don't commit local installs)
+.opencode/skills/
+.opencode/commands/
+.claude/skills/
+.claude/settings.local.json
