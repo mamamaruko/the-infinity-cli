@@ -147,7 +147,7 @@ find ψ/incubate -type l 2>/dev/null | while read link; do
 done
 
 echo "🏠 External (ghq)"
-ghq list | grep -v "laris-co/Nat-s-Agents" | head -10
+ghq list | head -10
 ```
 
 ## Directory Structure
@@ -187,8 +187,8 @@ User: "I want to work on claude-mem"
 → Symlink created, work until done
 
 # User wants to contribute (keep ghq for follow-up)
-User: "Fix a bug in oracle-v2"
-→ /project incubate https://github.com/Soul-Brews-Studio/oracle-v2 --contribute
+User: "Fix a bug in the-infinity"
+→ /project incubate https://github.com/mamamaruko/the-infinity --contribute
 → [edit, commit, push]
 → Auto-offload, ghq kept for PR feedback
 

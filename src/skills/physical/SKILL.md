@@ -16,7 +16,7 @@ Check Nat's current physical location from FindMy data.
 
 ## Data Source
 
-- Repo: `laris-co/nat-location-data` (GitHub)
+- Repo: `[OWNER/REPO]` (GitHub location data source)
 - Files: `current.csv` (now), `history.csv` (today's log)
 - Updated: Every 5 minutes via white.local cron
 - Source: FindMy via Sate's iMac

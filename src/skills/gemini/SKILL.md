@@ -155,4 +155,4 @@ await send('chat', {                            // 4. Send chat
 
 ## Extension Source
 
-`github.com/laris-co/claude-browser-proxy` (v2.8.8+)
+`github.com/[owner]/claude-browser-proxy` (v2.8.8+ compatible fork)

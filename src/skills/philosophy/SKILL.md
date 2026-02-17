@@ -212,7 +212,7 @@ When running `/philosophy check`:
 
 - `oracle-philosophy/PHILOSOPHY.md`
 - `oracle-philosophy-book/2026/ch01-oracle-philosophy.md`
-- `oracle-v2/.claude/knowledge/oracle-philosophy.md`
+- `the-infinity/.claude/knowledge/oracle-philosophy.md`
 - GitHub Issue #29: Phukhao Oracle Birth
 
 ---
