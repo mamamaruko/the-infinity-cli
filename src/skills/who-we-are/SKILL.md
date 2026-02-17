@@ -161,8 +161,8 @@ If Oracle identity found, include:
 **OS**: Darwin 25.2.0
 
 ## Location
-**Project**: the-infinity-skills-cli
-**Path**: /Users/nat/Code/.../the-infinity-skills-cli
+**Project**: the-infinity-cli
+**Path**: /Users/nat/Code/.../the-infinity-cli
 
 ## Philosophy
 > "The Oracle Keeps the Human Human"

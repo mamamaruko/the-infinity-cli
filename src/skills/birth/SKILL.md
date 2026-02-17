@@ -115,7 +115,7 @@ gh issue create --repo [OWNER/REPO] \
 Learn from your ancestors:
 
 ```bash
-/learn https://github.com/mamamaruko/the-infinity-skills-cli
+/learn https://github.com/mamamaruko/the-infinity-cli
 /learn https://github.com/mamamaruko/the-infinity
 ```
 

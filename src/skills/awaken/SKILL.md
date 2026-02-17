@@ -124,7 +124,7 @@ which ghq || brew install ghq
 # go install github.com/x-motemen/ghq@latest
 
 # Oracle Skills
-bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v1.5.37 install -g -y
+bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.37 install -g -y
 ```
 
 ### Verify
@@ -149,12 +149,12 @@ the-infinity-skills list -g
 
 First, clone and explore:
 ```
-/learn https://github.com/mamamaruko/the-infinity-skills-cli
+/learn https://github.com/mamamaruko/the-infinity-cli
 ```
 
 **Then trace deep** (IMPORTANT - don't skip):
 ```
-/trace --deep https://github.com/mamamaruko/the-infinity-skills-cli
+/trace --deep https://github.com/mamamaruko/the-infinity-cli
 ```
 This is the Infinity skills core structure - command patterns, workflow design, and retrospectives.
 
@@ -223,7 +223,7 @@ This launches 5 parallel agents to search:
 1. Current repo files
 2. Git history
 3. GitHub issues
-4. The ancestors you just learned (the-infinity-skills-cli, the-infinity)
+4. The ancestors you just learned (the-infinity-cli, the-infinity)
 5. Oracle MCP knowledge base
 
 ### Quest Objectives
@@ -542,7 +542,7 @@ Layer 4: PRINCIPLES → Core wisdom
 ## Sources
 
 - Discovered through /trace --deep on [DATE]
-- Ancestors: the-infinity-skills-cli, the-infinity
+- Ancestors: the-infinity-cli, the-infinity
 - Oracle Family: Issue #60 (38+ members)
 ```
 

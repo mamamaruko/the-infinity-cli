@@ -1,4 +1,4 @@
-# ψ/ - AI Brain for the-infinity-skills-cli
+# ψ/ - AI Brain for the-infinity-cli
 
 > Born: 2026-01-20
 > Parent: mamamaruko/the-infinity-cli

@@ -7,13 +7,13 @@ import type { Skill, InstallOptions } from './types.js';
 import { mkdirp, rmrf, cpr, mv, rmf, cp, type ShellMode } from './fs-utils.js';
 import pkg from '../../package.json' with { type: 'json' };
 
-// Check if an installed skill was installed by the-infinity-skills-cli
+// Check if an installed skill was installed by the-infinity-cli
 async function isOurSkill(skillPath: string): Promise<boolean> {
   const skillMdPath = join(skillPath, 'SKILL.md');
   if (!existsSync(skillMdPath)) return false;
   try {
     const content = await Bun.file(skillMdPath).text();
-    return content.includes('installer: the-infinity-skills-cli');
+    return content.includes('installer: the-infinity-cli');
   } catch {
     return false;
   }
@@ -134,8 +134,8 @@ export async function installSkills(
     // Create target directory
     await mkdirp(targetDir, shellMode);
 
-    // Auto-cleanup: remove orphaned skills installed by the-infinity-skills-cli
-    // Only removes skills that: 1) have installer: the-infinity-skills-cli marker, 2) no longer exist in source
+    // Auto-cleanup: remove orphaned skills installed by the-infinity-cli
+    // Only removes skills that: 1) have installer: the-infinity-cli marker, 2) no longer exist in source
     const sourceSkillNames = allSkills.map((s) => s.name);
 
     if (existsSync(targetDir)) {
@@ -216,7 +216,7 @@ export async function installSkills(
             // Add installer field after opening ---
             content = content.replace(
               /^---\n/,
-              `---\ninstaller: the-infinity-skills-cli v${pkg.version}\n`
+              `---\ninstaller: the-infinity-cli v${pkg.version}\n`
             );
             // Prepend version AND scope to description (G=Global, L=Local, SKILL for other agents)
             const scopeChar = scope === 'Global' ? 'G' : 'L';
@@ -275,7 +275,7 @@ export async function installSkills(
     // Write human-readable VERSION.md for agents to report
     const versionMd = `# The Infinity Skills
 
-Installed by: **the-infinity-skills-cli v${pkg.version}**
+Installed by: **the-infinity-cli v${pkg.version}**
 Installed at: ${new Date().toISOString()}
 Agent: ${agent.displayName}
 Skills: ${skillsToInstall.length}
@@ -284,7 +284,7 @@ Skills: ${skillsToInstall.length}
 
 When asked about skills version, report:
 \`\`\`
-the-infinity-skills-cli v${pkg.version}
+the-infinity-cli v${pkg.version}
 \`\`\`
 
 ## Installed Skills
@@ -334,7 +334,7 @@ Execute the \`${skill.name}\` skill with args: \`$ARGUMENTS\`
 **Otherwise**: Read the skill file at \`${skillsPath}/${skill.name}/SKILL.md\` and follow ALL instructions in it.
 
 ---
-*the-infinity-skills-cli v${pkg.version}*
+*the-infinity-cli v${pkg.version}*
 `;
           const commandPath = join(commandsDir, `${skill.name}.md`);
           await Bun.write(commandPath, stubContent);

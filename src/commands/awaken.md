@@ -18,4 +18,4 @@ Execute the `awaken` skill with the provided arguments.
 **IMPORTANT**: Only use the path above. Do NOT search for or use any other file with "awaken" in the name.
 
 ---
-*the-infinity-skills-cli v1.5.80*
+*the-infinity-cli v1.5.80*

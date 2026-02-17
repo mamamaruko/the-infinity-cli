@@ -91,7 +91,7 @@ describe("installer behavior by agent type", () => {
             // Full skill SHOULD have content
             expect(content).toContain("# /trace");
             // Should have version injected
-            expect(/installer: (oracle-skills-cli|the-infinity-skills-cli)/.test(content)).toBe(true);
+            expect(/installer: (oracle-skills-cli|the-infinity-cli)/.test(content)).toBe(true);
           }
         }
       }

@@ -1,7 +1,7 @@
 # the-infinity-skills
 
 [![CI](https://github.com/mamamaruko/the-infinity-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/mamamaruko/the-infinity-cli/actions/workflows/ci.yml)
-[![Version](https://img.shields.io/github/v/tag/mamamaruko/the-infinity-skills-cli?label=version)](https://github.com/mamamaruko/the-infinity-cli/releases)
+[![Version](https://img.shields.io/github/v/tag/mamamaruko/the-infinity-cli?label=version)](https://github.com/mamamaruko/the-infinity-cli/releases)
 
 Install The Infinity skills to Claude Code, OpenCode, Cursor, and 11+ AI coding agents.
 
@@ -23,7 +23,7 @@ curl -fsSL https://claude.ai/install.sh | bash
 
 ```bash
 # Install the-infinity-skills
-curl -fsSL https://raw.githubusercontent.com/mamamaruko/the-infinity-skills-cli/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/mamamaruko/the-infinity-cli/main/install.sh | bash
 
 # Setup permissions (run in your Oracle repo after restart)
 mkdir -p .claude && cat > .claude/settings.local.json << 'EOF'
@@ -56,7 +56,7 @@ Then restart Claude Code and run:
 ### One Command
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/mamamaruko/the-infinity-skills-cli/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/mamamaruko/the-infinity-cli/main/install.sh | bash
 ```
 
 <details>
@@ -73,7 +73,7 @@ which bun || curl -fsSL https://bun.sh/install | bash
 which ghq || brew install ghq  # or: go install github.com/x-motemen/ghq@latest
 
 # 3. Install the-infinity-skills
-~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v1.5.36 install -g -y
+~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.36 install -g -y
 
 # Permissions are set up during /awaken in your Oracle repo
 echo "✨ Done! Run: claude . then /awaken"
@@ -97,7 +97,7 @@ which ghq || brew install ghq  # macOS
 
 # 3. Install the-infinity-skills
 ~/.bun/bin/bunx --bun \
-  the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v1.5.36 \
+  the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.36 \
   install -g -y
 
 # 4. Setup permissions in your Oracle repo (run BEFORE claude .)
@@ -122,7 +122,7 @@ EOF
 
 # 5. Create alias (add to ~/.bashrc or ~/.zshrc)
 alias the-infinity-skills='~/.bun/bin/bunx --bun \
-  the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v1.5.36'
+  the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.36'
 
 # 6. Usage (with alias)
 the-infinity-skills install -g -y
@@ -130,9 +130,9 @@ the-infinity-skills list -g
 the-infinity-skills uninstall -g -y
 
 # Or full command
-~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v1.5.36 install -g -y
-~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v1.5.36 list -g
-~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v1.5.36 uninstall -g -y
+~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.36 install -g -y
+~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.36 list -g
+~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.36 uninstall -g -y
 
 # Flags
 # -g  Global (user) directory
@@ -178,7 +178,7 @@ Oracle skills extend your agent's capabilities with specialized workflows:
 | 25 | **who-we-are** | skill | Know ourselves |
 | 26 | **worktree** | skill | Git worktree for parallel work |
 
-*Generated: 2026-02-17 15:26:12 UTC*
+*Generated: 2026-02-17 15:30:25 UTC*
 
 ## Supported Agents
 
@@ -208,7 +208,7 @@ Oracle skills follow the Oracle Philosophy — AI as external brain, not command
 ## Related
 
 - [the-infinity](https://github.com/mamamaruko/the-infinity) - MCP Memory Layer (Infinity brain)
-- [the-infinity-skills-cli](https://github.com/mamamaruko/the-infinity-cli) - Skills installer and manager
+- [the-infinity-cli](https://github.com/mamamaruko/the-infinity-cli) - Skills installer and manager
 - [Agent Skills Specification](https://agentskills.io) - Cross-agent skill format
 - [add-skill](https://github.com/vercel-labs/add-skill) - Universal skill installer by Vercel
 

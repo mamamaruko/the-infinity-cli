@@ -40,7 +40,7 @@ describe("integration: OpenCode global install", () => {
 
     const content = await readFile(rrrPath, "utf-8");
     expect(content).toContain("G-SKLL");
-    expect(/installer: (oracle-skills-cli|the-infinity-skills-cli)/.test(content)).toBe(true);
+    expect(/installer: (oracle-skills-cli|the-infinity-cli)/.test(content)).toBe(true);
     expect(content.includes("# /rrr") || content.includes("# RRR - Session Retrospective")).toBe(true);
     expect(content.includes("## /rrr (Default)") || content.includes("## Flow")).toBe(true);
     expect(content.length).toBeGreaterThan(100);

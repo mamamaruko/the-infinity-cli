@@ -183,8 +183,8 @@ For each repo found, check for Oracle pattern:
 | Repo | Owner | Updated |
 |------|-------|---------|
 | the-infinity | mamamaruko | Jan 20 |
-| the-infinity-skills-cli | mamamaruko | Jan 20 |
-| the-infinity-skills-cli | mamamaruko | Jan 16 |
+| the-infinity-cli | mamamaruko | Jan 20 |
+| the-infinity-cli | mamamaruko | Jan 16 |
 
 ### Partial Pattern
 | Repo | Has ψ/ | Has CLAUDE.md |
@@ -192,7 +192,7 @@ For each repo found, check for Oracle pattern:
 | oracle-starter-kit | No | Yes |
 
 ### Tools/Infrastructure
-- the-infinity-skills-cli (CLI tool)
+- the-infinity-cli (CLI tool)
 - oracle-mcp (MCP server)
 - oracle-status-tray (Menu bar app)
 ```

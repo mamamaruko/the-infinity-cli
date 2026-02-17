@@ -67,4 +67,4 @@ This installs to:
 
 ---
 
-*the-infinity-skills-cli v1.4.0 - OpenCode Plugin Support*
+*the-infinity-cli v1.4.0 - OpenCode Plugin Support*

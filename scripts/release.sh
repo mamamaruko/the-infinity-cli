@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-# Release script for the-infinity-skills-cli
+# Release script for the-infinity-cli
 # Usage: ./scripts/release.sh [patch|minor|major]
 #        ./scripts/release.sh 1.5.37  (specific version)
 

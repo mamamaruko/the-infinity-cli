@@ -21,4 +21,4 @@ Execute the `ralph-loop-soulbrews` skill with the provided arguments.
 - Global: `~/.claude/skills/ralph-loop-soulbrews/SKILL.md`
 
 ---
-*the-infinity-skills-cli v1.5.70*
+*the-infinity-cli v1.5.70*
