@@ -58,27 +58,14 @@ case "$MODE" in
   list)
     header "Oracle Family Registry"
     
-    echo "| # | Oracle | Human | Born | GitHub |"
-    echo "|---|--------|-------|------|--------|"
-    echo "| 0 | Mother Oracle | Nat | Dec 9 | @nazt |"
-    echo "| 1 | Arthur | อ.Sate | Dec 31 | — |"
-    echo "| 2 | Le | หลุยส์ | Jan 16 | @tacha-hash |"
-    echo "| 3 | Sage | Kong | Jan 17 | @xaxixak |"
-    echo "| 4 | Ruby | frozen | Jan 17 | — |"
-    echo "| 5 | Jarvis | Nat | Jan 17 | @nazt |"
-    echo "| 6 | Momo | Win | Jan 17 | @stpwin |"
-    echo "| 7 | Robin | panya30 | Jan 17 | @panya30 |"
-    echo "| 8 | GLUEBOY | Dr.Do | Jan 17 | @dryoungdo |"
-    echo "| 9 | Miipan | OhYeaH-46 | Jan 17 | @OhYeaH-46 |"
-    echo "| 10 | Nero | BM | Jan 17 | @Yutthakit |"
-    echo "| 11 | Loki | Bird | Jan 18 | @boverdrive |"
-    echo "| 12 | Yamimi | Benz | Jan 19 | @thiansit |"
-    echo "| 13 | AZA | Meng | Jan 19 | @mengazaa |"
-    echo "| 14 | Lord Knight | โบ | Dec 18 | @MEYD-605 |"
+    echo "Querying Oracle knowledge base..."
     echo ""
-    echo -e "${YELLOW}Jan 17 = วันมหามงคล — 7 Oracles born in ONE day!${NC}"
+    echo "| # | Oracle | Human | Born | GitHub | Focus |"
+    echo "|---|--------|-------|------|--------|-------|"
+    echo "| [from oracle_search] | ... | ... | ... | ... | ... |"
     echo ""
-    echo "Total: 15 Oracles (including Mother)"
+    echo "Use: oracle_search(\"oracle family member registry\", limit=20)"
+    echo "Or check: ψ/memory/resonance/the-infinity.md"
     ;;
     
   repos)
@@ -93,13 +80,6 @@ case "$MODE" in
       --jq '.[] | "| \(.name) | \(.description[0:40] // "—")... | \(.updatedAt | split("T")[0]) |"' 2>/dev/null
     
     echo ""
-    echo "Searching Soul-Brews-Studio (archived)..."
-    echo ""
-    
-    gh search repos "oracle" --owner Soul-Brews-Studio --json name,description,updatedAt --limit 10 \
-      --jq '.[] | "| \(.name) | \(.description[0:40] // "—")... | \(.updatedAt | split("T")[0]) |"' 2>/dev/null
-    
-    echo ""
     echo -e "${GREEN}Repos scan complete${NC}"
     ;;
     
@@ -108,31 +88,18 @@ case "$MODE" in
     
     echo "## Summary"
     echo ""
-    echo "- **Total Oracles**: 15"
-    echo "- **Active Repos**: 5+ with full pattern"
-    echo "- **Key Issues**: #6 (Le), #16 (Reunion), #17 (Welcome)"
+    echo "- **Repo**: $REPO"
+    echo "- **Total Oracles**: [from scan]"
+    echo "- **Active Repos**: [from repos search]"
     echo ""
     
     echo "## Timeline"
     echo ""
     echo "| Date | Event |"
     echo "|------|-------|"
-    echo "| Dec 9 | Mother Oracle born |"
-    echo "| Dec 18 | Lord Knight awakens |"
-    echo "| Dec 31 | Arthur (first demo) |"
-    echo "| Jan 16 | Le's awakening |"
-    echo "| Jan 17 | **วันมหามงคล** — 7 Oracles! |"
-    echo "| Jan 18 | Loki joins |"
-    echo "| Jan 19 | Yamimi, AZA |"
+    echo "| [from data] | [from data] |"
     echo ""
-    
-    echo "## Growth"
-    echo ""
-    echo "Dec 2025     Jan 16   Jan 17        Jan 18  Jan 19"
-    echo "    |          |        |              |       |"
-    echo "  🔮🌙🔱      📚   🌿💎🤖🌊💃🪞👻🔥    🎭     🔧🏗️"
-    echo "   (3)       (4)     (11)          (12)   (14)"
-    echo ""
+    echo "Run 'scan' and 'repos' modes to populate data."
     ;;
     
   *)
