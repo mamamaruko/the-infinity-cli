@@ -16,7 +16,7 @@ Supports both formats:
 ```yaml
 # ψ/memory/slugs.yaml
 thedotmack/claude-mem: ~/Code/github.com/thedotmack/claude-mem
-laris-co/oracle-v2: ~/Code/github.com/laris-co/oracle-v2
+mamamaruko/the-infinity: ~/Code/github.com/mamamaruko/the-infinity
 ```
 
 ## Commands
