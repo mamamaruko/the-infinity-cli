@@ -3,7 +3,7 @@
 # Usage: ./scan.sh [mode] [options]
 # Modes: scan (default), list, repos, report
 
-REPO="Soul-Brews-Studio/oracle-v2"
+REPO="mamamaruko/the-infinity"
 MODE="${1:-scan}"
 
 # Colors
@@ -84,19 +84,19 @@ case "$MODE" in
   repos)
     header "Oracle Repos on GitHub"
     
-    echo "Searching Soul-Brews-Studio..."
+    echo "Searching mamamaruko..."
     echo ""
     echo "| Repo | Description | Updated |"
     echo "|------|-------------|---------|"
     
-    gh search repos "oracle" --owner Soul-Brews-Studio --json name,description,updatedAt --limit 15 \
+    gh search repos "infinity oracle" --owner mamamaruko --json name,description,updatedAt --limit 15 \
       --jq '.[] | "| \(.name) | \(.description[0:40] // "—")... | \(.updatedAt | split("T")[0]) |"' 2>/dev/null
     
     echo ""
-    echo "Searching laris-co..."
+    echo "Searching Soul-Brews-Studio (archived)..."
     echo ""
     
-    gh search repos "oracle" --owner laris-co --json name,description,updatedAt --limit 10 \
+    gh search repos "oracle" --owner Soul-Brews-Studio --json name,description,updatedAt --limit 10 \
       --jq '.[] | "| \(.name) | \(.description[0:40] // "—")... | \(.updatedAt | split("T")[0]) |"' 2>/dev/null
     
     echo ""

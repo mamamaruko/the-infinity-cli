@@ -89,8 +89,8 @@ laris-co/oracle-v2: ~/Code/github.com/laris-co/oracle-v2
 
 ### Offload (remove symlinks)
 ```bash
-.claude/skills/project-manager/scripts/offload.sh laris-co/oracle-v2
-.claude/skills/project-manager/scripts/offload.sh oracle-v2  # short slug
+.claude/skills/project-manager/scripts/offload.sh mamamaruko/the-infinity
+.claude/skills/project-manager/scripts/offload.sh the-infinity  # short slug
 .claude/skills/project-manager/scripts/offload.sh all        # clean slate
 ```
 
