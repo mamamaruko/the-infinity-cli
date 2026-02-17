@@ -41,7 +41,7 @@ echo "Current installed: $CURRENT"
 
 ```bash
 # Get latest version from GitHub
-LATEST=$(curl -s https://api.github.com/repos/mamamaruko/the-infinity-skills-cli/tags | grep -m1 '"name"' | cut -d'"' -f4)
+LATEST=$(curl -s https://api.github.com/repos/mamamaruko/the-infinity-cli/tags | grep -m1 '"name"' | cut -d'"' -f4)
 echo "Latest available: $LATEST"
 ```
 
@@ -65,12 +65,12 @@ If versions differ (or `--cleanup` flag), run:
 
 **Normal sync:**
 ```bash
-~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#$LATEST install -g -y
+~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-cli#$LATEST install -g -y
 ```
 
 **With `--cleanup` (removes old skills first):**
 ```bash
-the-infinity-skills uninstall -g -y && ~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#$LATEST install -g -y
+the-infinity-skills uninstall -g -y && ~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-cli#$LATEST install -g -y
 ```
 
 Then **restart Claude Code** to load the synced skills.
@@ -92,12 +92,12 @@ Check that the version matches `$LATEST`.
 
 To see recent changes:
 ```bash
-gh release list --repo mamamaruko/the-infinity-skills-cli --limit 5
+gh release list --repo mamamaruko/the-infinity-cli --limit 5
 ```
 
 Or view commits:
 ```bash
-gh api repos/mamamaruko/the-infinity-skills-cli/commits --jq '.[0:5] | .[] | "\(.sha[0:7]) \(.commit.message | split("\n")[0])"'
+gh api repos/mamamaruko/the-infinity-cli/commits --jq '.[0:5] | .[] | "\(.sha[0:7]) \(.commit.message | split("\n")[0])"'
 ```
 
 ---

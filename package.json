@@ -31,16 +31,16 @@
     "cli",
     "bun"
   ],
-  "author": "mamamaruko",
+  "author": "arin",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mamamaruko/the-infinity-skills-cli.git"
+    "url": "git+https://github.com/mamamaruko/the-infinity-cli.git"
   },
   "bugs": {
-    "url": "https://github.com/mamamaruko/the-infinity-skills-cli/issues"
+    "url": "https://github.com/mamamaruko/the-infinity-cli/issues"
   },
-  "homepage": "https://github.com/mamamaruko/the-infinity-skills-cli#readme",
+  "homepage": "https://github.com/mamamaruko/the-infinity-cli#readme",
   "engines": {
     "node": ">=18"
   },

@@ -3,7 +3,7 @@
 ## One Command (Recommended)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/mamamaruko/the-infinity-skills-cli/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/mamamaruko/the-infinity-cli/main/install.sh | bash
 ```
 
 This auto-installs: bun, ghq, the-infinity-skills, and permissions.
@@ -24,7 +24,7 @@ which ghq || brew install ghq  # macOS
 
 # 3. Install the-infinity-skills
 ~/.bun/bin/bunx --bun \
-  the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v1.5.36 \
+  the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.36 \
   install -g -y
 
 # 4. Pre-approve Oracle commands (Claude Code)
@@ -48,7 +48,7 @@ EOF
 
 # 5. Create alias (add to ~/.bashrc or ~/.zshrc)
 alias the-infinity-skills='~/.bun/bin/bunx --bun \
-  the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v1.5.36'
+  the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.36'
 
 # 6. Usage (with alias)
 the-infinity-skills install -g -y
@@ -56,7 +56,7 @@ the-infinity-skills list -g
 the-infinity-skills uninstall -g -y
 
 # Or full command
-~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v1.5.36 install -g -y
+~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.36 install -g -y
 
 # Flags
 # -g  Global (user) directory

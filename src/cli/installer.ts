@@ -294,7 +294,7 @@ ${skillsToInstall.map((s) => `- ${s.name}`).join('\n')}
 ## Update Skills
 
 \`\`\`bash
-bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v${pkg.version} install -y -g
+bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-cli#v${pkg.version} install -y -g
 \`\`\`
 `;
     await Bun.write(join(targetDir, 'VERSION.md'), versionMd);

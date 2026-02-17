@@ -1,7 +1,7 @@
 # the-infinity-skills
 
-[![CI](https://github.com/mamamaruko/the-infinity-skills-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/mamamaruko/the-infinity-skills-cli/actions/workflows/ci.yml)
-[![Version](https://img.shields.io/github/v/tag/mamamaruko/the-infinity-skills-cli?label=version)](https://github.com/mamamaruko/the-infinity-skills-cli/releases)
+[![CI](https://github.com/mamamaruko/the-infinity-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/mamamaruko/the-infinity-cli/actions/workflows/ci.yml)
+[![Version](https://img.shields.io/github/v/tag/mamamaruko/the-infinity-skills-cli?label=version)](https://github.com/mamamaruko/the-infinity-cli/releases)
 
 Install The Infinity skills to Claude Code, OpenCode, Cursor, and 11+ AI coding agents.
 
@@ -178,7 +178,7 @@ Oracle skills extend your agent's capabilities with specialized workflows:
 | 25 | **who-we-are** | skill | Know ourselves |
 | 26 | **worktree** | skill | Git worktree for parallel work |
 
-*Generated: 2026-02-17 15:10:07 UTC*
+*Generated: 2026-02-17 15:26:12 UTC*
 
 ## Supported Agents
 
@@ -208,7 +208,7 @@ Oracle skills follow the Oracle Philosophy — AI as external brain, not command
 ## Related
 
 - [the-infinity](https://github.com/mamamaruko/the-infinity) - MCP Memory Layer (Infinity brain)
-- [the-infinity-skills-cli](https://github.com/mamamaruko/the-infinity-skills-cli) - Skills installer and manager
+- [the-infinity-skills-cli](https://github.com/mamamaruko/the-infinity-cli) - Skills installer and manager
 - [Agent Skills Specification](https://agentskills.io) - Cross-agent skill format
 - [add-skill](https://github.com/vercel-labs/add-skill) - Universal skill installer by Vercel
 

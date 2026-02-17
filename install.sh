@@ -39,7 +39,7 @@ fi
 
 # 3. Get latest stable version
 echo "🔍 Fetching latest stable version..."
-LATEST_TAG=$(curl -s https://api.github.com/repos/mamamaruko/the-infinity-skills-cli/releases/latest | grep '"tag_name"' | cut -d'"' -f4)
+LATEST_TAG=$(curl -s https://api.github.com/repos/mamamaruko/the-infinity-cli/releases/latest | grep '"tag_name"' | cut -d'"' -f4)
 
 if [ -z "$LATEST_TAG" ]; then
   echo "⚠️  Could not fetch latest version, using fallback v1.5.36"
@@ -48,7 +48,7 @@ fi
 
 echo "📦 Installing the-infinity-skills@$LATEST_TAG..."
 ~/.bun/bin/bunx --bun \
-  the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#$LATEST_TAG \
+  the-infinity-skills@github:mamamaruko/the-infinity-cli#$LATEST_TAG \
   install -g -y
 
 echo ""
