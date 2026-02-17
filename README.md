@@ -73,7 +73,7 @@ which bun || curl -fsSL https://bun.sh/install | bash
 which ghq || brew install ghq  # or: go install github.com/x-motemen/ghq@latest
 
 # 3. Install the-infinity-skills
-~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.36 install -g -y
+~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.82 install -g -y
 
 # Permissions are set up during /awaken in your Oracle repo
 echo "✨ Done! Run: claude . then /awaken"
@@ -97,7 +97,7 @@ which ghq || brew install ghq  # macOS
 
 # 3. Install the-infinity-skills
 ~/.bun/bin/bunx --bun \
-  the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.36 \
+  the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.82 \
   install -g -y
 
 # 4. Setup permissions in your Oracle repo (run BEFORE claude .)
@@ -122,7 +122,7 @@ EOF
 
 # 5. Create alias (add to ~/.bashrc or ~/.zshrc)
 alias the-infinity-skills='~/.bun/bin/bunx --bun \
-  the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.36'
+  the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.82'
 
 # 6. Usage (with alias)
 the-infinity-skills install -g -y
@@ -130,9 +130,9 @@ the-infinity-skills list -g
 the-infinity-skills uninstall -g -y
 
 # Or full command
-~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.36 install -g -y
-~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.36 list -g
-~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.36 uninstall -g -y
+~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.82 install -g -y
+~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.82 list -g
+~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-cli#v1.5.82 uninstall -g -y
 
 # Flags
 # -g  Global (user) directory
@@ -178,7 +178,7 @@ Oracle skills extend your agent's capabilities with specialized workflows:
 | 25 | **who-we-are** | skill | Know ourselves |
 | 26 | **worktree** | skill | Git worktree for parallel work |
 
-*Generated: 2026-02-17 15:30:25 UTC*
+*Generated: 2026-02-17 15:52:44 UTC*
 
 ## Supported Agents
 
