@@ -193,8 +193,8 @@ User: "Fix a bug in oracle-v2"
 → Auto-offload, ghq kept for PR feedback
 
 # User wants quick flash contribution (full cleanup)
-User: "Quick README fix on oracle-skills-cli"
-→ /project incubate https://github.com/Soul-Brews-Studio/oracle-skills-cli --flash
+User: "Quick README fix on the-infinity-skills-cli"
+→ /project incubate https://github.com/mamamaruko/the-infinity-skills-cli --flash
 → Issue #17 created
 → Branch: issue-17-fix-readme
 → [edit, commit, push]

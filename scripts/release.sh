@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-# Release script for oracle-skills-cli
+# Release script for the-infinity-skills-cli
 # Usage: ./scripts/release.sh [patch|minor|major]
 #        ./scripts/release.sh 1.5.37  (specific version)
 
@@ -64,4 +64,4 @@ echo "GitHub Actions will now:"
 echo "  1. Run tests"
 echo "  2. Create GitHub Release"
 echo ""
-echo "Check: https://github.com/Soul-Brews-Studio/oracle-skills-cli/actions"
+echo "Check: https://github.com/mamamaruko/the-infinity-skills-cli/actions"

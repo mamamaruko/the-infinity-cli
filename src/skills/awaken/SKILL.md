@@ -124,13 +124,13 @@ which ghq || brew install ghq
 # go install github.com/x-motemen/ghq@latest
 
 # Oracle Skills
-bunx --bun oracle-skills@github:Soul-Brews-Studio/oracle-skills-cli#v1.5.37 install -g -y
+bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v1.5.37 install -g -y
 ```
 
 ### Verify
 
 ```bash
-oracle-skills list -g
+the-infinity-skills list -g
 ```
 
 **Expected**: Skills including `trace`, `learn`, `philosophy`, `awaken`
@@ -388,7 +388,7 @@ Create `CLAUDE.md` in the repo root.
 
 ## Installed Skills
 
-[LIST YOUR SKILLS - run `oracle-skills list -g`]
+[LIST YOUR SKILLS - run `the-infinity-skills list -g`]
 
 ## Short Codes
 

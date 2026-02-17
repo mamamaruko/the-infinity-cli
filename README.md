@@ -1,15 +1,15 @@
-# oracle-skills
+# the-infinity-skills
 
-[![CI](https://github.com/Soul-Brews-Studio/oracle-skills-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/Soul-Brews-Studio/oracle-skills-cli/actions/workflows/ci.yml)
-[![Version](https://img.shields.io/github/v/tag/Soul-Brews-Studio/oracle-skills-cli?label=version)](https://github.com/Soul-Brews-Studio/oracle-skills-cli/releases)
+[![CI](https://github.com/mamamaruko/the-infinity-skills-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/mamamaruko/the-infinity-skills-cli/actions/workflows/ci.yml)
+[![Version](https://img.shields.io/github/v/tag/mamamaruko/the-infinity-skills-cli?label=version)](https://github.com/mamamaruko/the-infinity-skills-cli/releases)
 
-Install Oracle skills to Claude Code, OpenCode, Cursor, and 11+ AI coding agents.
+Install The Infinity skills to Claude Code, OpenCode, Cursor, and 11+ AI coding agents.
 
 > **Note**: This repo supersedes the following archived repositories:
 > - ~~[oracle-philosophy](https://github.com/Soul-Brews-Studio/oracle-philosophy)~~ → Now `/philosophy` skill
 > - ~~[oracle-starter-kit](https://github.com/laris-co/oracle-starter-kit)~~ → Now `curl | bash` installer
 >
-> Use this repo as the **single entry point** for Oracle installation.
+> Use this repo as the **single entry point** for The Infinity skills installation.
 
 ## Quick Install (Claude Code)
 
@@ -22,8 +22,8 @@ curl -fsSL https://claude.ai/install.sh | bash
 **Step 1:** Tell Claude to run, then restart and `/awaken`:
 
 ```bash
-# Install oracle-skills
-curl -fsSL https://raw.githubusercontent.com/Soul-Brews-Studio/oracle-skills-cli/main/install.sh | bash
+# Install the-infinity-skills
+curl -fsSL https://raw.githubusercontent.com/mamamaruko/the-infinity-skills-cli/main/install.sh | bash
 
 # Setup permissions (run in your Oracle repo after restart)
 mkdir -p .claude && cat > .claude/settings.local.json << 'EOF'
@@ -56,7 +56,7 @@ Then restart Claude Code and run:
 ### One Command
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Soul-Brews-Studio/oracle-skills-cli/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/mamamaruko/the-infinity-skills-cli/main/install.sh | bash
 ```
 
 <details>
@@ -64,7 +64,7 @@ curl -fsSL https://raw.githubusercontent.com/Soul-Brews-Studio/oracle-skills-cli
 
 ```bash
 #!/bin/bash
-# Oracle Skills Installer - checks and installs: bun, ghq, oracle-skills
+# The Infinity Skills Installer - checks and installs: bun, ghq, the-infinity-skills
 
 # 1. Check & install bun
 which bun || curl -fsSL https://bun.sh/install | bash
@@ -72,8 +72,8 @@ which bun || curl -fsSL https://bun.sh/install | bash
 # 2. Check & install ghq
 which ghq || brew install ghq  # or: go install github.com/x-motemen/ghq@latest
 
-# 3. Install oracle-skills
-~/.bun/bin/bunx --bun oracle-skills@github:Soul-Brews-Studio/oracle-skills-cli#v1.5.36 install -g -y
+# 3. Install the-infinity-skills
+~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v1.5.36 install -g -y
 
 # Permissions are set up during /awaken in your Oracle repo
 echo "✨ Done! Run: claude . then /awaken"
@@ -95,9 +95,9 @@ which bun || curl -fsSL https://bun.sh/install | bash
 which ghq || brew install ghq  # macOS
 # Linux/Windows: go install github.com/x-motemen/ghq@latest
 
-# 3. Install oracle-skills
+# 3. Install the-infinity-skills
 ~/.bun/bin/bunx --bun \
-  oracle-skills@github:Soul-Brews-Studio/oracle-skills-cli#v1.5.36 \
+  the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v1.5.36 \
   install -g -y
 
 # 4. Setup permissions in your Oracle repo (run BEFORE claude .)
@@ -121,18 +121,18 @@ mkdir -p .claude && cat > .claude/settings.local.json << 'EOF'
 EOF
 
 # 5. Create alias (add to ~/.bashrc or ~/.zshrc)
-alias oracle-skills='~/.bun/bin/bunx --bun \
-  oracle-skills@github:Soul-Brews-Studio/oracle-skills-cli#v1.5.36'
+alias the-infinity-skills='~/.bun/bin/bunx --bun \
+  the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v1.5.36'
 
 # 6. Usage (with alias)
-oracle-skills install -g -y
-oracle-skills list -g
-oracle-skills uninstall -g -y
+the-infinity-skills install -g -y
+the-infinity-skills list -g
+the-infinity-skills uninstall -g -y
 
 # Or full command
-~/.bun/bin/bunx --bun oracle-skills@github:Soul-Brews-Studio/oracle-skills-cli#v1.5.36 install -g -y
-~/.bun/bin/bunx --bun oracle-skills@github:Soul-Brews-Studio/oracle-skills-cli#v1.5.36 list -g
-~/.bun/bin/bunx --bun oracle-skills@github:Soul-Brews-Studio/oracle-skills-cli#v1.5.36 uninstall -g -y
+~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v1.5.36 install -g -y
+~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v1.5.36 list -g
+~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v1.5.36 uninstall -g -y
 
 # Flags
 # -g  Global (user) directory
@@ -141,7 +141,7 @@ oracle-skills uninstall -g -y
 # -s  Specific skill(s)
 ```
 
-Then run `claude "/awaken"` to create a new Oracle ([example](https://github.com/Soul-Brews-Studio/phukhao-oracle)).
+Then run `claude "/awaken"` to create a new Infinity repo ([example](https://github.com/mamamaruko/the-infinity)).
 
 ## Skills
 
@@ -178,7 +178,7 @@ Oracle skills extend your agent's capabilities with specialized workflows:
 | 25 | **who-we-are** | skill | Know ourselves |
 | 26 | **worktree** | skill | Git worktree for parallel work |
 
-*Generated: 2026-02-14 03:10:36 UTC*
+*Generated: 2026-02-17 14:51:08 UTC*
 
 ## Supported Agents
 
@@ -207,8 +207,8 @@ Oracle skills follow the Oracle Philosophy — AI as external brain, not command
 
 ## Related
 
-- [oracle-v2](https://github.com/Soul-Brews-Studio/oracle-v2) - MCP Memory Layer (Oracle brain)
-- [Soul Brews Plugin Marketplace](https://github.com/Soul-Brews-Studio/plugin-marketplace) - Source of Oracle skills
+- [the-infinity](https://github.com/mamamaruko/the-infinity) - MCP Memory Layer (Infinity brain)
+- [the-infinity-skills-cli](https://github.com/mamamaruko/the-infinity-skills-cli) - Skills installer and manager
 - [Agent Skills Specification](https://agentskills.io) - Cross-agent skill format
 - [add-skill](https://github.com/vercel-labs/add-skill) - Universal skill installer by Vercel
 

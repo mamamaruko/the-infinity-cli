@@ -192,7 +192,7 @@ For each repo found, check for Oracle pattern:
 | oracle-starter-kit | No | Yes |
 
 ### Tools/Infrastructure
-- oracle-skills-cli (CLI tool)
+- the-infinity-skills-cli (CLI tool)
 - oracle-mcp (MCP server)
 - oracle-status-tray (Menu bar app)
 ```

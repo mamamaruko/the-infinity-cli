@@ -31,11 +31,11 @@ jobs:
             ## Install
 
             ```bash
-            curl -fsSL https://raw.githubusercontent.com/Soul-Brews-Studio/oracle-skills-cli/${{ github.ref_name }}/install.sh | bash
+            curl -fsSL https://raw.githubusercontent.com/mamamaruko/the-infinity-skills-cli/${{ github.ref_name }}/install.sh | bash
             ```
 
             Or manually:
 
             ```bash
-            bunx oracle-skills@github:Soul-Brews-Studio/oracle-skills-cli#${{ github.ref_name }} install -g -y
+            bunx the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#${{ github.ref_name }} install -g -y
             ```

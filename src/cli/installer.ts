@@ -7,13 +7,13 @@ import type { Skill, InstallOptions } from './types.js';
 import { mkdirp, rmrf, cpr, mv, rmf, cp, type ShellMode } from './fs-utils.js';
 import pkg from '../../package.json' with { type: 'json' };
 
-// Check if an installed skill was installed by oracle-skills-cli
+// Check if an installed skill was installed by the-infinity-skills-cli
 async function isOurSkill(skillPath: string): Promise<boolean> {
   const skillMdPath = join(skillPath, 'SKILL.md');
   if (!existsSync(skillMdPath)) return false;
   try {
     const content = await Bun.file(skillMdPath).text();
-    return content.includes('installer: oracle-skills-cli');
+    return content.includes('installer: the-infinity-skills-cli');
   } catch {
     return false;
   }
@@ -134,8 +134,8 @@ export async function installSkills(
     // Create target directory
     await mkdirp(targetDir, shellMode);
 
-    // Auto-cleanup: remove orphaned skills installed by oracle-skills-cli
-    // Only removes skills that: 1) have installer: oracle-skills-cli marker, 2) no longer exist in source
+    // Auto-cleanup: remove orphaned skills installed by the-infinity-skills-cli
+    // Only removes skills that: 1) have installer: the-infinity-skills-cli marker, 2) no longer exist in source
     const sourceSkillNames = allSkills.map((s) => s.name);
 
     if (existsSync(targetDir)) {
@@ -144,7 +144,7 @@ export async function installSkills(
         .map((d) => d.name);
 
       const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-      const trashDir = join(tmpdir(), `oracle-skills-stale-${timestamp}`);
+      const trashDir = join(tmpdir(), `the-infinity-skills-stale-${timestamp}`);
       let movedAny = false;
       const failedMoves: string[] = [];
 
@@ -216,7 +216,7 @@ export async function installSkills(
             // Add installer field after opening ---
             content = content.replace(
               /^---\n/,
-              `---\ninstaller: oracle-skills-cli v${pkg.version}\n`
+              `---\ninstaller: the-infinity-skills-cli v${pkg.version}\n`
             );
             // Prepend version AND scope to description (G=Global, L=Local, SKILL for other agents)
             const scopeChar = scope === 'Global' ? 'G' : 'L';
@@ -270,12 +270,12 @@ export async function installSkills(
       skills: skillsToInstall.map((s) => s.name),
       agent: agentName,
     };
-    await Bun.write(join(targetDir, '.oracle-skills.json'), JSON.stringify(manifest, null, 2));
+    await Bun.write(join(targetDir, '.the-infinity-skills.json'), JSON.stringify(manifest, null, 2));
 
     // Write human-readable VERSION.md for agents to report
-    const versionMd = `# Oracle Skills
+    const versionMd = `# The Infinity Skills
 
-Installed by: **oracle-skills-cli v${pkg.version}**
+Installed by: **the-infinity-skills-cli v${pkg.version}**
 Installed at: ${new Date().toISOString()}
 Agent: ${agent.displayName}
 Skills: ${skillsToInstall.length}
@@ -284,7 +284,7 @@ Skills: ${skillsToInstall.length}
 
 When asked about skills version, report:
 \`\`\`
-oracle-skills-cli v${pkg.version}
+the-infinity-skills-cli v${pkg.version}
 \`\`\`
 
 ## Installed Skills
@@ -294,7 +294,7 @@ ${skillsToInstall.map((s) => `- ${s.name}`).join('\n')}
 ## Update Skills
 
 \`\`\`bash
-bunx --bun oracle-skills@github:Soul-Brews-Studio/oracle-skills-cli#v${pkg.version} install -y -g
+bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v${pkg.version} install -y -g
 \`\`\`
 `;
     await Bun.write(join(targetDir, 'VERSION.md'), versionMd);
@@ -334,7 +334,7 @@ Execute the \`${skill.name}\` skill with args: \`$ARGUMENTS\`
 **Otherwise**: Read the skill file at \`${skillsPath}/${skill.name}/SKILL.md\` and follow ALL instructions in it.
 
 ---
-*oracle-skills-cli v${pkg.version}*
+*the-infinity-skills-cli v${pkg.version}*
 `;
           const commandPath = join(commandsDir, `${skill.name}.md`);
           await Bun.write(commandPath, stubContent);
@@ -350,10 +350,10 @@ Execute the \`${skill.name}\` skill with args: \`$ARGUMENTS\`
         ? join(homedir(), '.config/opencode/plugins')
         : join(process.cwd(), '.opencode/plugins');
       await mkdirp(pluginDir, shellMode);
-      const hookSrc = join(dirname(import.meta.path), '..', 'hooks', 'opencode', 'oracle-skills.ts');
+      const hookSrc = join(dirname(import.meta.path), '..', 'hooks', 'opencode', 'the-infinity-skills.ts');
       if (existsSync(hookSrc)) {
-        await cp(hookSrc, join(pluginDir, 'oracle-skills.ts'), shellMode);
-        p.log.success(`OpenCode plugin: ${pluginDir}/oracle-skills.ts`);
+        await cp(hookSrc, join(pluginDir, 'the-infinity-skills.ts'), shellMode);
+        p.log.success(`OpenCode plugin: ${pluginDir}/the-infinity-skills.ts`);
       }
     }
 

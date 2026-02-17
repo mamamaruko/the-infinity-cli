@@ -1,12 +1,12 @@
 /**
- * Oracle Skills Plugin for OpenCode
+ * The Infinity Skills Plugin for OpenCode
  * Adds "opencode-cli:" prefix with timestamp (GMT+7) to identify sessions
  */
 import type { Plugin } from "@opencode-ai/plugin"
 
 const PREFIX = "opencode-cli:"
 
-/** Get current timestamp in GMT+7 (ICT) format: HH:MM */
+/** Get current timestamp in GMT+7 format: HH:MM */
 function getTimestamp(): string {
   const now = new Date()
   // Convert to GMT+7
@@ -17,8 +17,8 @@ function getTimestamp(): string {
   return `${hours}:${minutes}`
 }
 
-const OracleSkillsPlugin: Plugin = () => ({
-  name: "oracle-skills",
+const TheInfinitySkillsPlugin: Plugin = () => ({
+  name: "the-infinity-skills",
   
   "experimental.chat.messages.transform": (_input: any, output: any) => {
     if (output?.messages && Array.isArray(output.messages)) {
@@ -28,7 +28,7 @@ const OracleSkillsPlugin: Plugin = () => ({
           for (const part of msg.parts) {
             if (part.type === "text" && part.text && !part.text.startsWith(PREFIX)) {
               const timestamp = getTimestamp()
-              part.text = `${PREFIX} [${timestamp} ICT] ${part.text}`
+              part.text = `${PREFIX} [${timestamp} GMT+7] ${part.text}`
             }
           }
         }
@@ -37,4 +37,4 @@ const OracleSkillsPlugin: Plugin = () => ({
   },
 })
 
-export default OracleSkillsPlugin
+export default TheInfinitySkillsPlugin

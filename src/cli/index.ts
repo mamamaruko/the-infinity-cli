@@ -3,13 +3,13 @@
 // Bun runtime check - must be at the very top
 if (typeof Bun === 'undefined') {
   console.error(`
-❌ oracle-skills requires Bun runtime
+❌ the-infinity-skills requires Bun runtime
 
 You're running with Node.js, but this CLI uses Bun-specific features.
 
 To fix:
   1. Install Bun: curl -fsSL https://bun.sh/install | bash
-  2. Run with: bunx oracle-skills install -g -y
+  2. Run with: bunx the-infinity-skills install -g -y
 
 More info: https://bun.sh
 `);
@@ -26,14 +26,14 @@ import pkg from '../../package.json' with { type: 'json' };
 const VERSION = pkg.version;
 
 program
-  .name('oracle-skills')
-  .description('Install Oracle skills to Claude Code, OpenCode, Cursor, and 11+ AI coding agents')
+  .name('the-infinity-skills')
+  .description('Install The Infinity skills to Claude Code, OpenCode, Cursor, and 11+ AI coding agents')
   .version(VERSION);
 
 // Install command (default)
 program
   .command('install', { isDefault: true })
-  .description('Install Oracle skills to agents')
+  .description('Install The Infinity skills to agents')
   .option('-g, --global', 'Install to user directory instead of project')
   .option('-a, --agent <agents...>', 'Target specific agents (e.g., claude-code, opencode)')
   .option('-s, --skill <skills...>', 'Install specific skills by name')
@@ -43,7 +43,7 @@ program
   .option('--shell', 'Force Bun.$ shell commands (use on Windows to test shell compatibility)')
   .option('--no-shell', 'Force Node.js fs operations (use on Unix if Bun.$ causes issues)')
   .action(async (options) => {
-    p.intro(`🔮 Oracle Skills Installer v${VERSION}`);
+    p.intro(`∞ The Infinity Skills Installer v${VERSION}`);
 
     try {
       // List mode - just show skills and exit
@@ -125,7 +125,7 @@ program
         shellMode,
       });
 
-      p.outro('✨ Oracle skills installed! Restart your agent to activate.');
+      p.outro('✨ The Infinity skills installed! Restart your agent to activate.');
     } catch (error) {
       p.log.error(`Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
       process.exit(1);
@@ -135,7 +135,7 @@ program
 // Uninstall command
 program
   .command('uninstall')
-  .description('Remove installed Oracle skills')
+  .description('Remove installed The Infinity skills')
   .option('-g, --global', 'Uninstall from user directory')
   .option('-a, --agent <agents...>', 'Target specific agents')
   .option('-s, --skill <skills...>', 'Remove specific skills only')
@@ -143,7 +143,7 @@ program
   .option('--shell', 'Force Bun.$ shell commands')
   .option('--no-shell', 'Force Node.js fs operations')
   .action(async (options) => {
-    p.intro(`🔮 Oracle Skills Uninstaller v${VERSION}`);
+    p.intro(`∞ The Infinity Skills Uninstaller v${VERSION}`);
 
     try {
       // Determine target agents
@@ -167,7 +167,7 @@ program
 
       // Confirm
       if (!options.yes) {
-        const skillInfo = options.skill ? `skills: ${options.skill.join(', ')}` : 'all Oracle skills';
+        const skillInfo = options.skill ? `skills: ${options.skill.join(', ')}` : 'all The Infinity skills';
         const confirmed = await p.confirm({
           message: `Remove ${skillInfo} from ${targetAgents.length} agent(s)?`,
         });
@@ -217,7 +217,7 @@ program
 // List installed skills command
 program
   .command('list')
-  .description('Show installed Oracle skills')
+  .description('Show installed The Infinity skills')
   .option('-g, --global', 'Show global (user-level) skills')
   .option('-a, --agent <agents...>', 'Show skills for specific agents')
   .action(async (options) => {
@@ -235,7 +235,7 @@ program
       return;
     }
 
-    console.log('\nInstalled Oracle skills:\n');
+    console.log('\nInstalled The Infinity skills:\n');
 
     let totalSkills = 0;
 

@@ -6,19 +6,19 @@
 
 ## The Problem
 
-When using OpenCode with Oracle Skills, there's no way to know if Oracle Skills are active in a session. Users and agents can't easily identify which sessions have Oracle capabilities installed.
+When using OpenCode with The Infinity Skills, there's no way to know if The Infinity Skills are active in a session. Users and agents can't easily identify which sessions have Infinity capabilities installed.
 
 ## The Solution
 
-A simple OpenCode plugin that prefixes all user messages with `opencodecli:`. This creates a clear identifier that Oracle Skills are active.
+A simple OpenCode plugin that prefixes all user messages with `opencode-cli:`. This creates a clear identifier that The Infinity Skills are active.
 
 ## How It Works
 
 ```typescript
-const PREFIX = "opencodecli:"
+const PREFIX = "opencode-cli:"
 
-const OracleSkillsPlugin: Plugin = () => ({
-  name: "oracle-skills",
+const TheInfinitySkillsPlugin: Plugin = () => ({
+  name: "the-infinity-skills",
   
   "experimental.chat.messages.transform": (_input: any, output: any) => {
     if (output?.messages && Array.isArray(output.messages)) {
@@ -46,16 +46,16 @@ OpenCode's message structure uses `msg.info.role` not `msg.role`. This was disco
 The plugin is automatically installed when you run:
 
 ```bash
-bunx oracle-skills install -a opencode -g
+bunx the-infinity-skills install -a opencode -g
 ```
 
 This installs to:
-- Global: `~/.config/opencode/plugins/oracle-skills.ts`
-- Local: `.opencode/plugins/oracle-skills.ts`
+- Global: `~/.config/opencode/plugins/the-infinity-skills.ts`
+- Local: `.opencode/plugins/the-infinity-skills.ts`
 
 ## Impact
 
-- **Session Identification**: Instantly know if Oracle Skills are active
+- **Session Identification**: Instantly know if The Infinity Skills are active
 - **Debugging**: Easier to trace which sessions have Oracle capabilities
 - **Future**: Foundation for more advanced hook integrations
 
@@ -67,4 +67,4 @@ This installs to:
 
 ---
 
-*oracle-skills-cli v1.4.0 - OpenCode Plugin Support*
+*the-infinity-skills-cli v1.4.0 - OpenCode Plugin Support*

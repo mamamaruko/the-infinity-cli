@@ -1,16 +1,8 @@
----
-title: # Forward + Plan Mode Chain Pattern
-tags: [forward, plan-mode, handoff, wrap-up, session-flow, patterns]
-created: 2026-02-04
-source: Session analysis: oracle-skills-cli
----
-
-# # Forward + Plan Mode Chain Pattern
-
 # Forward + Plan Mode Chain Pattern
 
 **Date**: 2026-02-04
 **Context**: Discovered from analyzing wrap-up session transcript
+**Confidence**: High
 
 ## Key Learning
 
@@ -55,5 +47,6 @@ source: Session analysis: oracle-skills-cli
 
 Never: `/compact` → `/forward` (context lost!)
 
----
-*Added via Oracle Learn*
+## Tags
+
+`forward`, `plan-mode`, `handoff`, `session-flow`, `patterns`

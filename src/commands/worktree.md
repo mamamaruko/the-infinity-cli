@@ -18,4 +18,4 @@ Execute the `worktree` skill with the provided arguments.
 **IMPORTANT**: Only use the path above. Do NOT search for or use any other file with "worktree" in the name.
 
 ---
-*oracle-skills-cli v1.5.80*
+*the-infinity-skills-cli v1.5.80*

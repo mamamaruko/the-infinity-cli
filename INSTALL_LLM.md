@@ -1,12 +1,12 @@
-# Install Oracle Skills — FOR AI AGENTS
+# Install The Infinity Skills — FOR AI AGENTS
 
 ## One Command (Recommended)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/Soul-Brews-Studio/oracle-skills-cli/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/mamamaruko/the-infinity-skills-cli/main/install.sh | bash
 ```
 
-This auto-installs: bun, ghq, oracle-skills, and permissions.
+This auto-installs: bun, ghq, the-infinity-skills, and permissions.
 
 ---
 
@@ -22,9 +22,9 @@ which bun || curl -fsSL https://bun.sh/install | bash
 which ghq || brew install ghq  # macOS
 # Linux/Windows: go install github.com/x-motemen/ghq@latest
 
-# 3. Install oracle-skills
+# 3. Install the-infinity-skills
 ~/.bun/bin/bunx --bun \
-  oracle-skills@github:Soul-Brews-Studio/oracle-skills-cli#v1.5.36 \
+  the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v1.5.36 \
   install -g -y
 
 # 4. Pre-approve Oracle commands (Claude Code)
@@ -47,16 +47,16 @@ mkdir -p .claude && cat > .claude/settings.local.json << 'EOF'
 EOF
 
 # 5. Create alias (add to ~/.bashrc or ~/.zshrc)
-alias oracle-skills='~/.bun/bin/bunx --bun \
-  oracle-skills@github:Soul-Brews-Studio/oracle-skills-cli#v1.5.36'
+alias the-infinity-skills='~/.bun/bin/bunx --bun \
+  the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v1.5.36'
 
 # 6. Usage (with alias)
-oracle-skills install -g -y
-oracle-skills list -g
-oracle-skills uninstall -g -y
+the-infinity-skills install -g -y
+the-infinity-skills list -g
+the-infinity-skills uninstall -g -y
 
 # Or full command
-~/.bun/bin/bunx --bun oracle-skills@github:Soul-Brews-Studio/oracle-skills-cli#v1.5.36 install -g -y
+~/.bun/bin/bunx --bun the-infinity-skills@github:mamamaruko/the-infinity-skills-cli#v1.5.36 install -g -y
 
 # Flags
 # -g  Global (user) directory

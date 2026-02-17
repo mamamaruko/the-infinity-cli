@@ -1,10 +1,10 @@
 {
-  "name": "oracle-skills",
+  "name": "the-infinity-skills",
   "version": "1.5.80",
-  "description": "Install Oracle skills to Claude Code, OpenCode, Cursor, and 11+ AI coding agents",
+  "description": "Install The Infinity skills to Claude Code, OpenCode, Cursor, and 11+ AI coding agents",
   "type": "module",
   "bin": {
-    "oracle-skills": "./src/cli/index.ts"
+    "the-infinity-skills": "./src/cli/index.ts"
   },
   "files": [
     "src",
@@ -20,27 +20,27 @@
     "prepublishOnly": "bun run compile && bun run build"
   },
   "keywords": [
-    "oracle",
+    "the-infinity",
+    "infinity",
     "skills",
     "claude-code",
     "opencode",
     "cursor",
     "codex",
     "ai-agents",
-    "soul-brews",
     "cli",
     "bun"
   ],
-  "author": "Soul Brews Studio",
+  "author": "mamamaruko",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Soul-Brews-Studio/oracle-skills-cli.git"
+    "url": "git+https://github.com/mamamaruko/the-infinity-skills-cli.git"
   },
   "bugs": {
-    "url": "https://github.com/Soul-Brews-Studio/oracle-skills-cli/issues"
+    "url": "https://github.com/mamamaruko/the-infinity-skills-cli/issues"
   },
-  "homepage": "https://github.com/Soul-Brews-Studio/oracle-skills-cli#readme",
+  "homepage": "https://github.com/mamamaruko/the-infinity-skills-cli#readme",
   "engines": {
     "node": ">=18"
   },

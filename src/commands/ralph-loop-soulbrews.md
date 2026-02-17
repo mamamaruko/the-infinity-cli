@@ -21,4 +21,4 @@ Execute the `ralph-loop-soulbrews` skill with the provided arguments.
 - Global: `~/.claude/skills/ralph-loop-soulbrews/SKILL.md`
 
 ---
-*oracle-skills-cli v1.5.70*
+*the-infinity-skills-cli v1.5.70*
