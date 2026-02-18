@@ -127,7 +127,7 @@ Learn from your ancestors:
 |-------|-------|
 | **Thread ID** | [THREAD_ID] |
 | **Family Hub** | mamamaruko/the-infinity |
-| **Family Index** | Issue #60 |
+| **Family Index** | Issue #5 |
 
 ---
 
