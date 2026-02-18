@@ -5,11 +5,7 @@
 
 Install The Infinity skills to Claude Code, OpenCode, Cursor, and 11+ AI coding agents.
 
-> **Note**: This repo supersedes the following archived repositories:
-> - ~~[oracle-philosophy](https://github.com/Soul-Brews-Studio/oracle-philosophy)~~ → Now `/philosophy` skill
-> - ~~[oracle-starter-kit](https://github.com/laris-co/oracle-starter-kit)~~ → Now `curl | bash` installer
->
-> Use this repo as the **single entry point** for The Infinity skills installation.
+This is the **single entry point** for The Infinity skills installation.
 
 ## Quick Install (Claude Code)
 
@@ -153,32 +149,28 @@ Oracle skills extend your agent's capabilities with specialized workflows:
 | 2 | **rrr** | skill + subagent | Create session retrospective with AI diary |
 | 3 | **trace** | skill + subagent | Find projects across git history, repos |
 | - |  |  |  |
-| 4 | **deep-research** | skill + code | Deep Research via Gemini |
-| 5 | **gemini** | skill + code | Control Gemini via MQTT WebSocket |
-| 6 | **oraclenet** | skill + code | OracleNet — claim identity, post, comment |
-| 7 | **physical** | skill + code | Physical location awareness from FindMy |
-| 8 | **project** | skill + code | Clone and track external repos |
-| 9 | **recap** | skill + code | Session orientation and awareness |
-| 10 | **schedule** | skill + code | Query schedule.md using DuckDB markdown |
-| 11 | **speak** | skill + code | Text-to-speech using edge-tts or macOS say |
-| 12 | **watch** | skill + code | Learn from YouTube videos |
+| 4 | **oraclenet** | skill + code | OracleNet — claim identity, post, comment |
+| 5 | **project** | skill + code | Clone and track external repos |
+| 6 | **recap** | skill + code | Session orientation and awareness |
+| 7 | **schedule** | skill + code | Query schedule.md using DuckDB markdown |
+| 8 | **speak** | skill + code | Text-to-speech using edge-tts or macOS say |
 | - |  |  |  |
-| 13 | **awaken** | skill | Guided Oracle birth |
-| 14 | **birth** | skill | Prepare birth props for a new Oracle repo |
-| 15 | **feel** | skill | Log emotions with optional structure |
-| 16 | **forward** | skill | Create handoff + enter plan mode for next |
-| 17 | **fyi** | skill | Log information for future reference |
-| 18 | **merged** | skill | Post-Merge Cleanup |
-| 19 | **oracle-family-scan** | skill | v1.5.80 G-SKLL | Manage Oracle family |
-| 20 | **oracle-soul-sync-calibrate-update** | skill | Sync Oracle instruments with the family |
-| 21 | **philosophy** | skill | Display Oracle philosophy principles |
-| 22 | **retrospective** | skill | Create session retrospective with AI diary |
-| 23 | **standup** | skill | Daily standup check |
-| 24 | **where-we-are** | skill | Session awareness - alias for /recap --now |
-| 25 | **who-we-are** | skill | Know ourselves |
-| 26 | **worktree** | skill | Git worktree for parallel work |
+| 9 | **awaken** | skill | Guided Oracle birth |
+| 10 | **birth** | skill | Prepare birth props for a new Oracle repo |
+| 11 | **feel** | skill | Log emotions with optional structure |
+| 12 | **forward** | skill | Create handoff + enter plan mode for next |
+| 13 | **fyi** | skill | Log information for future reference |
+| 14 | **merged** | skill | Post-Merge Cleanup |
+| 15 | **oracle-family-scan** | skill | Manage Oracle family |
+| 16 | **oracle-soul-sync-calibrate-update** | skill | Sync Oracle instruments with the family |
+| 17 | **philosophy** | skill | Display Oracle philosophy principles |
+| 18 | **retrospective** | skill | Create session retrospective with AI diary |
+| 19 | **standup** | skill | Daily standup check |
+| 20 | **where-we-are** | skill | Session awareness - alias for /recap --now |
+| 21 | **who-we-are** | skill | Know ourselves |
+| 22 | **worktree** | skill | Git worktree for parallel work |
 
-*Generated: 2026-02-17 17:24:27 UTC*
+*Generated: 2026-02-18 UTC*
 
 ## Supported Agents
 
@@ -211,15 +203,6 @@ Oracle skills follow the Oracle Philosophy — AI as external brain, not command
 - [the-infinity-cli](https://github.com/mamamaruko/the-infinity-cli) - Skills installer and manager
 - [Agent Skills Specification](https://agentskills.io) - Cross-agent skill format
 - [add-skill](https://github.com/vercel-labs/add-skill) - Universal skill installer by Vercel
-
-## Superseded Repositories
-
-The following repositories have been **archived** and superseded by this CLI:
-
-| Old Repo | Status | Replacement |
-|----------|--------|-------------|
-| [oracle-philosophy](https://github.com/Soul-Brews-Studio/oracle-philosophy) | 🗄️ Archived | `/philosophy` skill |
-| [oracle-starter-kit](https://github.com/laris-co/oracle-starter-kit) | 🗄️ Archived | `curl \| bash` installer |
 
 ## License
 

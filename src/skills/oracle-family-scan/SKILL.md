@@ -31,7 +31,7 @@ date "+🕐 %H:%M %Z (%A %d %B %Y)"
 
 **Goal**: Find ALL Oracle introductions across GitHub issues.
 
-> **⚠️ IMPORTANT**: Scan ONLY `mamamaruko/the-infinity`. Do NOT search other repos like Soul-Brews-Studio/oracle-v2.
+> **⚠️ IMPORTANT**: Scan ONLY `mamamaruko/the-infinity`.
 
 ### Step 1: Get All Issues with Comments
 

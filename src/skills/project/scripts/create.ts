@@ -14,7 +14,7 @@ if (!name) {
 
 const ROOT = getRoot();
 const { incubateDir } = getPaths(ROOT);
-const ORG = "laris-co";
+const ORG = "mamamaruko";
 const isPublic = args.includes("--public");
 
 const localPath = ghqPath(ORG, name);

@@ -1,7 +1,7 @@
 # OpenCode Skill Resolution: The Hierarchy of Shadows
 
 **Date**: 2026-01-18
-**Context**: Debugging `oracle-skills-cli` v1.2.0 -> v1.2.7 integration with Soul-Brews-Studio/opencode
+**Context**: Debugging `the-infinity-cli` v1.2.0 -> v1.2.7 integration with OpenCode
 **Severity**: High (Blocks new features)
 **Tags**: #deep-dive #opencode #debugging #hierarchy #shadowing #trap
 
@@ -41,7 +41,7 @@ When you type `/rrr` in OpenCode, it resolves the definition file in this exact 
 
 ## Directory Structure Requirements
 
-Soul-Brews OpenCode (v1.1.25+) has specific directory expectations that differ from upstream or other agents.
+OpenCode (v1.1.25+) has specific directory expectations that differ from other agents.
 
 ### Correct Structure (Rank 4)
 ```
@@ -67,8 +67,8 @@ To successfully migrate a user to modern Global Skills:
     *   *Why*: Removes the Highest Priority Blocker.
 2.  **Nuke Legacy Global**: `rm -rf ~/.opencode/`
     *   *Why*: Removes the Secondary Blocker.
-3.  **Install to Command**: Ensure `oracle-skills-cli` installs to `command/` directory.
-    *   *Fix*: Implemented in `oracle-skills-cli` v1.2.7.
+3.  **Install to Command**: Ensure `the-infinity-cli` installs to `command/` directory.
+    *   *Fix*: Implemented in `the-infinity-cli` v1.2.7.
 
 ## Meta-Analysis: Why this happened
 
@@ -79,6 +79,6 @@ We assumed **Flexible Paths** (`skill` or `command` works).
 The reality is **Strict Paths** (Only `command` works for this specific agent config).
 
 **Reference**:
-- `oracle-skills-cli` v1.2.7 release commit: `d9c52d1`
+- `the-infinity-cli` v1.2.7 release commit: `d9c52d1`
 - Trace Session: `2026-01-18`
 - User Quote: *"this is the most high priority what you think? not ~/. that .opencode!"*

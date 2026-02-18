@@ -254,7 +254,7 @@ export async function installSkills(
             name: skill.name,
             description: skill.description,
             version: pkg.version,
-            author: { name: 'Soul Brews Studio' },
+            author: { name: 'The Infinity' },
           };
           await Bun.write(pluginJsonPath, JSON.stringify(pluginJson, null, 2));
         }

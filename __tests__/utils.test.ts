@@ -14,7 +14,7 @@ describe("parseRepo", () => {
 
   it("uses default org for short name", () => {
     const r = parseRepo("myrepo");
-    expect(r).toEqual({ owner: "laris-co", name: "myrepo", slug: "laris-co/myrepo" });
+    expect(r).toEqual({ owner: "mamamaruko", name: "myrepo", slug: "mamamaruko/myrepo" });
   });
 
   it("uses custom default org", () => {

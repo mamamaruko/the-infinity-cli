@@ -71,7 +71,7 @@ mamamaruko/the-infinity: ~/Code/github.com/mamamaruko/the-infinity
 
 ### Incubate (work, auto-create)
 ```bash
-.claude/skills/project-manager/scripts/incubate.sh <name> [--org laris-co]
+.claude/skills/project-manager/scripts/incubate.sh <name> [--org mamamaruko]
 ```
 
 ### Spinoff (graduate)
