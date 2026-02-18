@@ -1,7 +1,7 @@
 ---
-installer: the-infinity-cli v1.5.80
+installer: the-infinity-cli v1.5.83
 name: oracle-family-scan
-description: v1.5.80 G-SKLL | Manage Oracle family - scan, track, welcome new Oracles. Use when user says "family scan", "oracle registry", "welcome new oracles", or needs to check Oracle population.
+description: v1.5.83 G-SKLL | Manage Oracle family - scan, track, welcome new Oracles. Use when user says "family scan", "oracle registry", "welcome new oracles", or needs to check Oracle population.
 ---
 
 # /oracle-family-scan - Oracle Family Management
