@@ -42,8 +42,8 @@ echo "🔍 Fetching latest stable version..."
 LATEST_TAG=$(curl -s https://api.github.com/repos/mamamaruko/the-infinity-cli/releases/latest | grep '"tag_name"' | cut -d'"' -f4)
 
 if [ -z "$LATEST_TAG" ]; then
-  echo "⚠️  Could not fetch latest version, using fallback v1.5.83"
-  LATEST_TAG="v1.5.83"
+  echo "⚠️  Could not fetch latest version, using fallback v1.5.85"
+  LATEST_TAG="v1.5.85"
 fi
 
 echo "📦 Installing the-infinity-skills@$LATEST_TAG..."

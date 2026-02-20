@@ -1,5 +1,5 @@
 ---
-description: v1.5.84 | Sync Oracle instruments with the family. Check and update skills to latest version. Use when user says "soul-sync", "sync", "calibrate", "update", or before /awaken.
+description: v1.5.85 | Sync Oracle instruments with the family. Check and update skills to latest version. Use when user says "soul-sync", "sync", "calibrate", "update", or before /awaken.
 ---
 
 # /oracle-soul-sync-calibrate-update
@@ -18,4 +18,4 @@ Execute the `oracle-soul-sync-calibrate-update` skill with the provided argument
 **IMPORTANT**: Only use the path above. Do NOT search for or use any other file with "oracle-soul-sync-calibrate-update" in the name.
 
 ---
-*the-infinity-cli v1.5.84*
+*the-infinity-cli v1.5.85*

@@ -1,5 +1,5 @@
 ---
-description: v1.5.84 | Control Gemini browser tab via MQTT bridge. Use when user says "gemini", wants to send message to Gemini, inspect Gemini tabs, or run Gemini deep research flow.
+description: v1.5.85 | Control Gemini browser tab via MQTT bridge. Use when user says "gemini", wants to send message to Gemini, inspect Gemini tabs, or run Gemini deep research flow.
 ---
 
 # /gemini
@@ -18,4 +18,4 @@ Execute the `gemini` skill with the provided arguments.
 **IMPORTANT**: Only use the path above. Do NOT search for or use any other file with "gemini" in the name.
 
 ---
-*the-infinity-cli v1.5.84*
+*the-infinity-cli v1.5.85*

@@ -1,5 +1,5 @@
 ---
-description: v1.5.84 | Learn from YouTube videos through Gemini transcription and save learnings. Use when user says "watch", "transcribe youtube", "learn from video", or shares a YouTube URL.
+description: v1.5.85 | Learn from YouTube videos through Gemini transcription and save learnings. Use when user says "watch", "transcribe youtube", "learn from video", or shares a YouTube URL.
 ---
 
 # /watch
@@ -18,4 +18,4 @@ Execute the `watch` skill with the provided arguments.
 **IMPORTANT**: Only use the path above. Do NOT search for or use any other file with "watch" in the name.
 
 ---
-*the-infinity-cli v1.5.84*
+*the-infinity-cli v1.5.85*
