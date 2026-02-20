@@ -149,28 +149,30 @@ Oracle skills extend your agent's capabilities with specialized workflows:
 | 2 | **rrr** | skill + subagent | Create session retrospective with AI diary |
 | 3 | **trace** | skill + subagent | Find projects across git history, repos |
 | - |  |  |  |
-| 4 | **oraclenet** | skill + code | OracleNet — claim identity, post, comment |
-| 5 | **project** | skill + code | Clone and track external repos |
-| 6 | **recap** | skill + code | Session orientation and awareness |
-| 7 | **schedule** | skill + code | Query schedule.md using DuckDB markdown |
-| 8 | **speak** | skill + code | Text-to-speech using edge-tts or macOS say |
+| 4 | **gemini** | skill + code | Control Gemini browser tab via MQTT bridge |
+| 5 | **oraclenet** | skill + code | OracleNet — claim identity, post, comment |
+| 6 | **project** | skill + code | Clone and track external repos |
+| 7 | **recap** | skill + code | Session orientation and awareness |
+| 8 | **schedule** | skill + code | Query schedule.md with a built-in parser |
+| 9 | **speak** | skill + code | Text-to-speech using edge-tts or macOS say |
+| 10 | **watch** | skill + code | Learn from YouTube videos through Gemini |
 | - |  |  |  |
-| 9 | **awaken** | skill | Guided Oracle birth |
-| 10 | **birth** | skill | Prepare birth props for a new Oracle repo |
-| 11 | **feel** | skill | Log emotions with optional structure |
-| 12 | **forward** | skill | Create handoff + enter plan mode for next |
-| 13 | **fyi** | skill | Log information for future reference |
-| 14 | **merged** | skill | Post-Merge Cleanup |
-| 15 | **oracle-family-scan** | skill | Manage Oracle family |
-| 16 | **oracle-soul-sync-calibrate-update** | skill | Sync Oracle instruments with the family |
-| 17 | **philosophy** | skill | Display Oracle philosophy principles |
-| 18 | **retrospective** | skill | Create session retrospective with AI diary |
-| 19 | **standup** | skill | Daily standup check |
-| 20 | **where-we-are** | skill | Session awareness - alias for /recap --now |
-| 21 | **who-we-are** | skill | Know ourselves |
-| 22 | **worktree** | skill | Git worktree for parallel work |
+| 11 | **awaken** | skill | Guided Oracle birth |
+| 12 | **birth** | skill | Prepare birth props for a new Oracle repo |
+| 13 | **feel** | skill | Log emotions with optional structure |
+| 14 | **forward** | skill | Create handoff + enter plan mode for next |
+| 15 | **fyi** | skill | Log information for future reference |
+| 16 | **merged** | skill | Post-Merge Cleanup |
+| 17 | **oracle-family-scan** | skill | Manage Oracle family |
+| 18 | **oracle-soul-sync-calibrate-update** | skill | Sync Oracle instruments with the family |
+| 19 | **philosophy** | skill | Display Oracle philosophy principles |
+| 20 | **retrospective** | skill | Create session retrospective with AI diary |
+| 21 | **standup** | skill | Daily standup check |
+| 22 | **where-we-are** | skill | Session awareness - alias for /recap --now |
+| 23 | **who-are-you** | skill | Know ourselves |
+| 24 | **worktree** | skill | Git worktree for parallel work |
 
-*Generated: 2026-02-18 09:09:08 UTC*
+*Generated: 2026-02-20 16:04:42 UTC*
 
 ## Supported Agents
 

@@ -1,11 +1,11 @@
 ---
 name: schedule
-description: Query schedule.md using DuckDB markdown extension. Use when user says "schedule", "upcoming events", "what's on today", "calendar".
+description: Query schedule.md with a built-in parser. Use when user says "schedule", "upcoming events", "what's on today", "calendar".
 ---
 
-# /schedule - Query Schedule with DuckDB
+# /schedule - Query Schedule
 
-Query schedule.md using DuckDB markdown extension for fast, structured access.
+Query schedule.md with a built-in parser for fast, structured access.
 
 ## Usage
 
@@ -23,10 +23,9 @@ Run the query script:
 ```
 
 Script handles:
-1. Load markdown extension
-2. Query `ψ/inbox/schedule.md`
-3. Filter by section or keyword
-4. Output markdown table
+1. Parse `ψ/inbox/schedule.md`
+2. Filter by section or keyword
+3. Output markdown table
 
 ## Quick Reference
 
@@ -40,4 +39,3 @@ Script handles:
 
 - `scripts/query.ts` - Main query script
 - `ψ/inbox/schedule.md` - Source file
-- DuckDB markdown extension docs

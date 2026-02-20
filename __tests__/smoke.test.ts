@@ -34,6 +34,19 @@ describe("recap scripts", () => {
 describe("schedule scripts", () => {
   // Skip calendar.ts on CI - `cal` command not available on Linux runners
   it.skipIf(!!process.env.CI || !!process.env.SKIP_CAL)("calendar.ts", async () => expect(await run(`${S}/schedule/scripts/calendar.ts`)).toMatch(/\d{4}|Su Mo Tu/));
-  it("query.ts", async () => expect(await run(`${S}/schedule/scripts/query.ts`)).toContain("Usage"));
+  it("query.ts", async () => expect(await run(`${S}/schedule/scripts/query.ts --help`)).toContain("Usage"));
 });
 
+describe("gemini scripts", () => {
+  it("send-chat.ts", async () => expect(await run(`${S}/gemini/scripts/send-chat.ts`)).toContain("Usage"));
+  it("set-model.ts", async () => expect(await run(`${S}/gemini/scripts/set-model.ts`)).toContain("Usage"));
+  it("deep-research.ts", async () => expect(await run(`${S}/gemini/scripts/deep-research.ts`)).toContain("Usage"));
+  it("youtube-transcribe.ts", async () => expect(await run(`${S}/gemini/scripts/youtube-transcribe.ts`)).toContain("Usage"));
+});
+
+describe("watch scripts", () => {
+  it("transcribe.ts", async () => expect(await run(`${S}/watch/scripts/transcribe.ts`)).toContain("Usage"));
+  it("get-metadata.ts", async () => expect(await run(`${S}/watch/scripts/get-metadata.ts`)).toContain("Usage"));
+  it("get-cc.ts", async () => expect(await run(`${S}/watch/scripts/get-cc.ts`)).toContain("Usage"));
+  it("save-learning.ts", async () => expect(await run(`${S}/watch/scripts/save-learning.ts`)).toContain("Usage"));
+});
