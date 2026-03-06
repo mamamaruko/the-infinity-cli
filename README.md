@@ -159,20 +159,21 @@ Oracle skills extend your agent's capabilities with specialized workflows:
 | - |  |  |  |
 | 11 | **awaken** | skill | Guided Oracle birth |
 | 12 | **birth** | skill | Prepare birth props for a new Oracle repo |
-| 13 | **feel** | skill | Log emotions with optional structure |
-| 14 | **forward** | skill | Create handoff + enter plan mode for next |
-| 15 | **fyi** | skill | Log information for future reference |
-| 16 | **merged** | skill | Post-Merge Cleanup |
-| 17 | **oracle-family-scan** | skill | Manage Oracle family |
-| 18 | **oracle-soul-sync-calibrate-update** | skill | Sync Oracle instruments with the family |
-| 19 | **philosophy** | skill | Display Oracle philosophy principles |
-| 20 | **retrospective** | skill | Create session retrospective with AI diary |
-| 21 | **standup** | skill | Daily standup check |
-| 22 | **where-we-are** | skill | Session awareness - alias for /recap --now |
-| 23 | **who-are-you** | skill | Know ourselves |
-| 24 | **worktree** | skill | Git worktree for parallel work |
+| 13 | **design** | skill | Research-first product design skill without |
+| 14 | **feel** | skill | Log emotions with optional structure |
+| 15 | **forward** | skill | Create handoff + enter plan mode for next |
+| 16 | **fyi** | skill | Log information for future reference |
+| 17 | **merged** | skill | Post-Merge Cleanup |
+| 18 | **oracle-family-scan** | skill | Manage Oracle family |
+| 19 | **oracle-soul-sync-calibrate-update** | skill | Sync Oracle instruments with the family |
+| 20 | **philosophy** | skill | Display Oracle philosophy principles |
+| 21 | **retrospective** | skill | Create session retrospective with AI diary |
+| 22 | **standup** | skill | Daily standup check |
+| 23 | **where-we-are** | skill | Session awareness - alias for /recap --now |
+| 24 | **who-are-you** | skill | Know ourselves |
+| 25 | **worktree** | skill | Git worktree for parallel work |
 
-*Generated: 2026-02-20 16:05:35 UTC*
+*Generated: 2026-03-06 07:01:29 UTC*
 
 ## Supported Agents
 
